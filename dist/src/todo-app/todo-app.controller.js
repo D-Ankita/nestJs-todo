@@ -14,21 +14,27 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.TodoAppController = void 0;
 const common_1 = require("@nestjs/common");
-const createTodo_dto_1 = require("./dto/createTodo.dto");
+const todo_dto_1 = require("./dto/todo.dto");
 const todo_app_services_1 = require("./todo-app.services");
 let TodoAppController = class TodoAppController {
     constructor(todoAppService) {
         this.todoAppService = todoAppService;
     }
     fetchAllTodos() {
+        console.log("in controller");
+        return this.todoAppService.fetchAllTodos();
     }
     insertTodo(body) {
+        return this.todoAppService.insertTodo(body);
     }
     fetchTodo(id) {
+        return this.todoAppService.fetchTodo(id);
     }
     updateTodo(id, body) {
+        return this.todoAppService.updateTodo(id, body);
     }
     deleteTodo(id) {
+        return this.todoAppService.deleteTodo(id);
     }
 };
 __decorate([
@@ -41,7 +47,7 @@ __decorate([
     (0, common_1.Post)(),
     __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [createTodo_dto_1.createTodoDto]),
+    __metadata("design:paramtypes", [todo_dto_1.todoDTO]),
     __metadata("design:returntype", void 0)
 ], TodoAppController.prototype, "insertTodo", null);
 __decorate([
@@ -56,7 +62,7 @@ __decorate([
     __param(0, (0, common_1.Param)('id')),
     __param(1, (0, common_1.Body)()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [String, createTodo_dto_1.createTodoDto]),
+    __metadata("design:paramtypes", [String, todo_dto_1.todoDTO]),
     __metadata("design:returntype", void 0)
 ], TodoAppController.prototype, "updateTodo", null);
 __decorate([

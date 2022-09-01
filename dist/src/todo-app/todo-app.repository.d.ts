@@ -1,9 +1,9 @@
-import { createTodoDto } from "./dto/createTodo.dto";
-import { updateMessageDto } from "./dto/updateTodo.enum";
+import { todoDTO } from "./dto/todo.dto";
 export declare class TodoAppRepository {
+    testing(): string;
     fetchAllTodos(): Promise<any>;
-    insertTodo(body: createTodoDto): Promise<void>;
+    insertTodo(body: todoDTO): Promise<any>;
     fetchTodo(id: any): Promise<any>;
-    updateTodo(id: any, body: updateMessageDto): Promise<void>;
-    deleteTodo(id: any): Promise<void>;
+    updateTodo(id: any, body: todoDTO): Promise<any>;
+    deleteTodo(id: any): Promise<any>;
 }

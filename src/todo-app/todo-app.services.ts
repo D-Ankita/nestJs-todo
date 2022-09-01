@@ -1,15 +1,18 @@
-import { Body } from "@nestjs/common";
-import { createTodoDto } from "./dto/createTodo.dto";
-import { updateMessageDto } from "./dto/updateTodo.enum";
+import { Body, Injectable } from "@nestjs/common";
+import { todoDTO } from "./dto/todo.dto";
 import { TodoAppRepository } from "./todo-app.repository";
-
+@Injectable()
 export class TodoAppService{
 	constructor(public todoAppRepo:TodoAppRepository){}
 	fetchAllTodos(){
+		console.log("in servies fat");
+		
 		return this.todoAppRepo.fetchAllTodos();
+		// return this.todoAppRepo.testing();
+
 	}
 
-	insertTodo(body:createTodoDto){
+	insertTodo(body:todoDTO){
 		return this.todoAppRepo.insertTodo(body)
 	}
 
@@ -17,8 +20,8 @@ export class TodoAppService{
 		return this.todoAppRepo.fetchTodo(id)
 
 	}
-	
-	updateTodo(id:string, body:updateMessageDto){
+
+	updateTodo(id:string, body:todoDTO){
 		return this.todoAppRepo.updateTodo(id,body)
 	}
 

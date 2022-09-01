@@ -1,0 +1,32 @@
+###list all messages
+GET http://localhost:3005/todo-app
+
+
+###create a new msg
+POST http://localhost:3005/todo-app
+Content-Type: application/json
+
+{
+	"content":"new task 4"
+	
+}
+
+###get a msg with ID
+GET http://localhost:3005/todo-app/todo-9sm22b8foca
+
+###get a msg with ID
+GET http://localhost:3005/todo-app/todo-tpd3h7r4qd
+
+
+
+###Update
+PATCH  http://localhost:3005/todo-app/todo-tpd3h7r4qd
+Content-Type: application/json
+
+{
+	"content":"Task 1- updated "
+}
+
+
+###delete a message with ID
+DELETE  http://localhost:3005/todo-app/todo-y113kazqy2

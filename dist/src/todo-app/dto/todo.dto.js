@@ -13,20 +13,18 @@ exports.todoDTO = void 0;
 const class_validator_1 = require("class-validator");
 const todoStatus_enum_1 = require("../enum/todoStatus.enum");
 class todoDTO {
+    constructor() {
+        this.status = todoStatus_enum_1.TodoStatus.PENDING;
+    }
 }
 __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
-], todoDTO.prototype, "id", void 0);
-__decorate([
-    (0, class_validator_1.IsString)(),
-    (0, class_validator_1.MinLength)(3, { message: 'Description is too short', }),
-    (0, class_validator_1.MaxLength)(50, { message: 'Description is too long', }),
-    __metadata("design:type", String)
 ], todoDTO.prototype, "content", void 0);
 __decorate([
     (0, class_validator_1.IsEnum)(todoStatus_enum_1.TodoStatus),
+    (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], todoDTO.prototype, "status", void 0);
 exports.todoDTO = todoDTO;
-//# sourceMappingURL=updateTodo.enum.js.map
+//# sourceMappingURL=todo.dto.js.map

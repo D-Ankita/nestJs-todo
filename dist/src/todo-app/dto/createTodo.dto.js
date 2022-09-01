@@ -9,18 +9,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.createTodoDto = void 0;
+exports.todoDTO = void 0;
 const class_validator_1 = require("class-validator");
 const todoStatus_enum_1 = require("../enum/todoStatus.enum");
-class createTodoDto {
+class todoDTO {
+    constructor() {
+        this.status = todoStatus_enum_1.TodoStatus.PENDING;
+    }
 }
 __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
-], createTodoDto.prototype, "content", void 0);
+], todoDTO.prototype, "content", void 0);
 __decorate([
     (0, class_validator_1.IsEnum)(todoStatus_enum_1.TodoStatus),
+    (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
-], createTodoDto.prototype, "status", void 0);
-exports.createTodoDto = createTodoDto;
+], todoDTO.prototype, "status", void 0);
+exports.todoDTO = todoDTO;
 //# sourceMappingURL=createTodo.dto.js.map
