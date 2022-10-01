@@ -1,7 +1,7 @@
 import { Injectable } from "@nestjs/common";
 import { readFile, writeFile } from "fs/promises";
 import { generateUniqueId } from "utils/generateUniqueId";
-import { todoDTO } from "./dto/todo.dto";
+import { todoDTO } from "./dto/createTodo.dto";
 import { TodoStatus } from "./enum/todoStatus.enum";
 
 @Injectable()

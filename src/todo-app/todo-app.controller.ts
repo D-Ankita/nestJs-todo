@@ -1,5 +1,5 @@
 import { Body, Controller, Delete, Get, Param, Patch, Post } from '@nestjs/common';
-import { todoDTO } from './dto/todo.dto';
+import { todoDTO } from './dto/createTodo.dto';
 import { TodoAppService } from './todo-app.services';
 
 @Controller('todo-app')

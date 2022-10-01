@@ -118,11 +118,38 @@ To delete an existing entry, perform a DELETE request to the endpoint `http://lo
 DELETE  http://localhost:3005/todo-app/todo-y113kazqy2
 ```
 
+
+## Directory Structure
+```
+. 
+├── package.json 
+├── package-lock.json 
+├── README.md  
+├── todoList.json
+├── rest.http
+├── tsconfig.json
+├── src
+|   └── todo-app
+|   |     └── dto
+|   |     |   └── todo.dto.ts
+|   |     └── enum
+|   |     |    └── todoStatus.enum.ts   
+|   |     └── todo-app.controller.ts
+|   |     └── todo-app.module.ts
+|   |     └── todo-app.repository.ts
+|   |     └── todo-app.services.ts
+|   └── app.controller.ts
+|   └── app.module.ts
+|   └── app.repository.ts
+|   └── app.services.ts
+└── utils 
+    └── generateUniqueId.ts 
+```
+
+
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-
 
 ## License
 

@@ -1,5 +1,5 @@
 import { Body, Injectable } from "@nestjs/common";
-import { todoDTO } from "./dto/todo.dto";
+import { todoDTO } from "./dto/createTodo.dto";
 import { TodoAppRepository } from "./todo-app.repository";
 @Injectable()
 export class TodoAppService{

@@ -1,4 +1,4 @@
-import { todoDTO } from "./dto/todo.dto";
+import { todoDTO } from "./dto/createTodo.dto";
 export declare class TodoAppRepository {
     testing(): string;
     fetchAllTodos(): Promise<any>;

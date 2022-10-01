@@ -1,4 +1,4 @@
-import { todoDTO } from './dto/todo.dto';
+import { todoDTO } from './dto/createTodo.dto';
 import { TodoAppService } from './todo-app.services';
 export declare class TodoAppController {
     todoAppService: TodoAppService;
